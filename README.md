@@ -5,9 +5,11 @@
 能不能能访问随缘，因为服务器性能太羸弱了，内存只有2GB，在并发时，即很多个人访问并且推理时内存很容易爆掉，不过平时应该没什么问题，只要我flask（5000端口)开着就行
 所有代码的github[https://github.com/YhQIAO/web_SOD](https://github.com/YhQIAO/web_SOD "https://github.com/YhQIAO/web_SOD")
 
+环境python3.7 + flask + pytorch
+或许直接clone下来就能运行了
 # 整体技术方案
 ## U2Net网络
-这是一个很强大的显著性检测模型，2020年cvpr，效果很好，具体的网络实现是从GitHub git clone下来的，别人已经写好了
+这是一个很强大的显著性检测模型，2020年cvpr，效果很好，具体的网络实现是从GitHub [https://github.com/xuebinqin/U-2-Net](https://github.com/xuebinqin/U-2-Net "https://github.com/xuebinqin/U-2-Net") git clone下来的，别人已经写好了
 
 ## flask
 这几天用下来的感受就是flask很方便，十分轻量级，像这种功能十分简单的网页搭建轻轻松松就能搭建了，后端与还能喝Pytorch直接结合，十分方便，太方便了
