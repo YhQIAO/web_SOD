@@ -1,0 +1,41 @@
+<html>
+<head>
+    <link type="text/css" href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
+</head>
+
+<body>
+<div class="card elevation">
+    <h2>基于U2Net的图像主体提取</h2>
+    <canvas
+            class="canvas elevation"
+            id="loaded_image"
+            width="320"
+            height="320"
+    ></canvas>
+    <br>
+    <input type="file" name="photo" id="choose_image" class="button"/>
+    <br>
+    <button id="infer" class=button>点击抠图</button>
+    <br>
+    <canvas
+            class="canvas elevation"
+            id="mask"
+            width="320"
+            height="320"
+    ></canvas>
+    <canvas
+            class="canvas elevation"
+            id="object"
+            width="320"
+            height="320"
+    ></canvas>
+    <br>
+<!--    <button id="download_mask" class=button>点击下载mask</button>-->
+<!--    <button id="download_object" class=button>点击下载主体</button>-->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+
+</div>
+</body>
+</html>
