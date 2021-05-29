@@ -1,12 +1,19 @@
 # 怎么又搞起flask框架了
-最近搞深度学习，想在网页上部署一个简单的在线demo，之前尝试了一下onnxjs，但是貌似现在还不则么成熟，解析网络模型直接给我报错了。。。。所以还是改成前后端的部署方案。之前学习过一点点javaweb，但是感觉javaweb太过于笨重了，对于一些轻量级的网页简直就是高射炮打蚊子。加上后算需要结合pytorch进行一些推理，所以就往python后端框架方向看了下，对比了下django和flask，flask更轻量级一些，故选择flask
+最近搞深度学习，想在网页上部署一个简单的在线demo，之前尝试了一下onnxjs，但是貌似现在还不则么成熟，解析网络模型直接给我报错了。。。。所以还是改成前后端的部署方案。
+之前学习过一点点javaweb，但是感觉javaweb太过于笨重了，对于一些轻量级的网页简直就是高射炮打蚊子。加上后算需要结合pytorch进行一些推理，所以就往python后端框架方向看了下，对比了下django和flask，flask更轻量级一些，故选择flask
 
 这是在线的demo：[http://www.yhqiao.xyz:5000/index](http://www.yhqiao.xyz:5000/index "http://www.yhqiao.xyz:5000/index")
+
 能不能能访问随缘，因为服务器性能太羸弱了，内存只有2GB，在并发时，即很多个人访问并且推理时内存很容易爆掉，不过平时应该没什么问题，只要我flask（5000端口)开着就行
+
 所有代码的github[https://github.com/YhQIAO/web_SOD](https://github.com/YhQIAO/web_SOD "https://github.com/YhQIAO/web_SOD")
 
 环境python3.7 + flask + pytorch
 或许直接clone下来就能运行了
+
+# 效果演示
+![image](https://github.com/YhQIAO/blog_images/blob/main/websod_mio.png)
+
 # 整体技术方案
 ## U2Net网络
 这是一个很强大的显著性检测模型，2020年cvpr，效果很好，具体的网络实现是从GitHub [https://github.com/xuebinqin/U-2-Net](https://github.com/xuebinqin/U-2-Net "https://github.com/xuebinqin/U-2-Net") git clone下来的，别人已经写好了
